@@ -1,0 +1,37 @@
+﻿@page
+@model viewModel
+@{
+    ViewData["Title"] = "Appointments";
+}
+<style>
+    table , tr, th, td {border: 1px solid black;}
+</style>
+
+<head>
+    <title>Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <form method="post">
+    <table style="width:100%">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Doctor</th>
+            <th>specialization</th>
+        </tr>
+
+        @foreach (var view in Model.viewParameterList)
+        {
+            <tr>
+                <td> @view.Id </td>
+                <td> @view.Name </td>
+                <td> @view.Date </td>
+                <td> @view.Doctor </td>
+                <td> @view.Specialization </td>
+            </tr>
+        }
+    </table>
+    </form>
+</body>

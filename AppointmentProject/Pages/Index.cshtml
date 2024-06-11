@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <form namae= "appointment" id="appointment" method="post">
+        Name:
+        <input name="Name" type="text" class="form-control input-lg" required />
+        <br />
+        Date:
+        <input name="Date" type="date" class="form-control input-lg" required />
+        <br />
+        Choose Doctor:
+        <br />
+        <select name="Doctor">
+            <option value="Dr. Nadia Fallah">Dr. Nadia Fallah</option>
+            <option value="Dr. Mohammed Ismail">Dr. Mohammed Ismail</option>
+            <option value="Dr. Salih Ahmet">Dr. Salih Ahmet</option>
+        </select>
+        <br />
+        <br />
+        Specialization:
+        <br />
+        <input name="specialization" type="radio" value="Cardiologist"  />
+        Cardiologist
+        <br />
+        <input name="specialization" type="radio" value="Pediatricians" />
+        Pediatricians
+        <br />
+        <input name="specialization" type="radio" value="Neurologist" />
+        Neurologist
+        <br />
+        <input name="specialization" type="radio" value="Dermatologist" />
+        Dermatologist
+        <br />
+        <br />
+        <input name="save" type="submit" value="Save" />
+
+    </form>
+</div>
